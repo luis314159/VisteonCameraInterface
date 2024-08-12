@@ -1,0 +1,6 @@
+[run]
+source = camara_raspberry
+omit = 
+    tests/*
+    autoapp.py
+

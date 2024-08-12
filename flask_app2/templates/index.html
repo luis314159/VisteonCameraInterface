@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Selection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="https://mma.prnewswire.com/media/352910/visteon_corporation_logo.jpg?p=facebook">
+        <h1>Select Camera</h1>
+        <div class="select-container">
+            <select id="cameraSelect">
+                <option value="0">Camera 0</option>
+                <option value="1">Camera 1</option>
+                <!-- Add more camera options if needed -->
+            </select>
+            <button onclick="startStream()">Start Stream</button>
+        </div>
+        <div class="video-container">
+            <img id="videoStream" src="" alt="Video Stream">
+        </div>
+        <div class="button-container">
+            <button onclick="saveImage('blue')">Blue</button>
+            <button onclick="saveImage('yellow')">Yellow</button>
+            <button onclick="saveImage('green')">Green</button>
+            <button onclick="saveImage('white')">White</button>
+            <button onclick="saveImage('red')">Red</button>
+            <button onclick="saveImage('none')">No Color</button>
+        </div>
+        <div id="message" class="message"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
